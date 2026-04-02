@@ -443,45 +443,40 @@ export default function HomePage() {
         </div>
 
         <footer className="footerMobile" style={styles.footer}>
-          <span style={styles.footerLogo}>⚡ {WEBSITE_NAME}</span>
+  <span style={styles.footerLogo}>⚡ {WEBSITE_NAME}</span>
 
-          <div className="footerLinksMobile" style={styles.footerLinks}>
-            {footerLinks.map((item) => (
-              <Link
-                key={item.key}
-                to={`/info#${item.key}`}
-                style={styles.footerLinkBtn}
-              >
-                {item.label}
-              </Link>
-            ))}
+  <div className="footerLinksMobile" style={styles.footerLinks}>
+    {footerLinks.map((item) => (
+      <Link
+        key={item.key}
+        to={`/info#${item.key}`}
+        style={styles.footerLinkBtn}
+      >
+        {item.label}
+      </Link>
+    ))}
 
-            <a
-              href="https://t.me/Crazyxyzdeal"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                ...styles.footerLinkBtn,
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-              }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="#4ade80"
-              >
-                <path d="M9.993 16.2l-.396 5.556c.567 0 .813-.243 1.107-.534l2.655-2.544 5.502 4.026c1.008.555 1.725.264 1.98-.933l3.588-16.803.001-.001c.303-1.417-.513-1.97-1.495-1.604L1.678 10.02c-1.386.54-1.366 1.314-.237 1.661l5.682 1.773L19.1 6.843c.564-.354 1.078-.158.655.196" />
-              </svg>
-              Join Telegram
-            </a>
-          </div>
+    <a
+      href="https://t.me/Crazyxyzdeal"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        ...styles.footerLinkBtn,
+        display: "flex",
+        alignItems: "center",
+        gap: "8px",
+      }}
+    >
+      Join Telegram
+    </a>
+  </div>
 
-          <span style={styles.footerCopy}>© 2026 {WEBSITE_NAME}</span>
-        </footer>
+  <span style={styles.footerCopy}>© 2026 {WEBSITE_NAME}</span>
+
+  <span style={{ ...styles.footerCopy, fontSize: "12px", opacity: 0.7 }}>
+    As an Amazon Associate I earn from qualifying purchases.
+  </span>
+</footer>
       </div>
     </div>
   );

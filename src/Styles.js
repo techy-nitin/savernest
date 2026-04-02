@@ -455,27 +455,33 @@ export const styles = {
 
   // ─── Card Image ───────────────────────────────────────────────
   imageWrap: {
-    position: "relative",
-    height: "230px",
-    overflow: "hidden",
-    flexShrink: 0,
-  },
+  position: "relative",
+  height: "230px",
+  overflow: "hidden",
+  flexShrink: 0,
+  background: "#f3f4f6",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+},
 
   image: {
-    width: "100%",
-    height: "100%",
-    objectFit: "cover",
-    display: "block",
-    filter: "brightness(0.84)",
-    transition: "transform 0.4s ease",
-  },
+  width: "100%",
+  height: "100%",
+  objectFit: "contain",
+  objectPosition: "center",
+  display: "block",
+  filter: "brightness(0.95)",
+  transition: "transform 0.4s ease",
+  padding: "8px",
+},
 
   imageOverlay: {
-    position: "absolute",
-    inset: 0,
-    background: "linear-gradient(to top, #111827 0%, transparent 60%)",
-  },
-
+  position: "absolute",
+  inset: 0,
+  background: "linear-gradient(to top, #111827 0%, rgba(17,24,39,0.08) 22%, transparent 55%)",
+  pointerEvents: "none",
+},
   cardBadge: {
     position: "absolute",
     top: "14px",
