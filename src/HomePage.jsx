@@ -11,7 +11,19 @@ export default function HomePage() {
     { key: "privacy", label: "Privacy Policy" },
     { key: "affiliate", label: "Affiliate Disclosure" },
   ];
-
+useEffect(() => {
+  if (window.innerWidth <= 768) {
+    requestAnimationFrame(() => {
+      const firstSection = document.querySelector("#all-sections");
+      if (firstSection) {
+        window.scrollTo({
+          top: firstSection.offsetTop,
+          behavior: "auto"
+        });
+      }
+    });
+  }
+}, []);
   useEffect(() => {
     const link = document.createElement("link");
     link.rel = "stylesheet";
@@ -215,7 +227,7 @@ export default function HomePage() {
       }
     `;
     document.head.appendChild(style);
-
+ 
     return () => {
       try {
         document.head.removeChild(link);
